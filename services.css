@@ -69,7 +69,7 @@ ul.headlist
     margin-top: 0px;
     position: absolute;
     top: 15px;
-    left: 255px;
+    left: inherit;
     
 }
 ul.headlist >li
