@@ -10,34 +10,48 @@ body
 {
     width: 1007px;
     margin: auto;
-    height: 100%;
+    position: relative;
+    padding-top: 1px;
+  
 }
 ul.request
 {   margin-top: 0px;
     font-size: 10px;
-   
-    position: absolute;
     top: 0px;
-    right: 255px;
+    right: 0px;
     background-color: #3B5B8A;
     color: #fff;
     margin: 0px;
     width: max-content;
+    position: absolute;
+    right: 0px;
 
 }
+
 ul.request li
-{   display: inline-block;
+{   display: inline-flex;
     
-    padding: 0px 5px;
-    border-right: 1px solid #fff;
+    
+
     margin: 5px 0px;
+   
  
     
 }
+ul.request li::after
+{   padding: 0px 5px;
+    content: "|";
+}
+ul.request li:last-child::after
+{
+    content: "";
+    padding: 0px 5px 0px 0px;
+}
+
 .request:first-child
 {
     margin-left: 0px;
-    padding-left: 0px;
+    padding-left: 5px;
 }
 .request:last-child
 {
@@ -54,16 +68,30 @@ ul.request li
     margin-top: 60px;
 }
 ul.headlist
-{   display: flex;
+{    width: 987px;
+     display: flex;
     font-size: 15px;
     float: left;
-    list-style: '|';
+    
     padding-left: 240px;
-   
+   list-style: none;
     font-size: 17px;
    
-    margin-top: 0px;
-    
+    margin: 0px;
+    border: 0.5px solid #374c61;
+    z-index: 0.5;
+    outline: 2px solid #050a1199    ;
+}
+ul.headlist li::after
+{
+    content: '|';
+    padding: 0px 25px;
+
+}
+ul.headlist li:last-child::after
+{
+    content: '';
+    padding: 0px 25px 0px 0px;
 }
 #logo
 {
@@ -77,11 +105,11 @@ ul.headlist >li
 {
    
   
-    padding: 25px 25px;
+    padding: 25px 0px;
 }
 #home
 {
-    list-style-type: none;
+    padding-left: 20px;
 }
 
 h1
@@ -103,10 +131,10 @@ h1
     background-color: #162C4450;   
 }
 .row
-{
+{   box-sizing: border-box;
     width: 1007px;
     outline-color: #3B5B8A;
-    outline-width: 1px;
+    
     border: 1px solid #3B5B8A;
     margin: 1px;
 }
@@ -196,7 +224,12 @@ padding-left: 200px;
 {
     color: blue;
 }
-.request:nth-child(2)
+span
 {
-    border: none;
+    padding: 16px 0px;
+}
+span::before
+{   content: '|';
+    padding: 16px 5px;
+
 }
