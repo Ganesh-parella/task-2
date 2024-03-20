@@ -133,11 +133,15 @@ h1
 .row
 {   box-sizing: border-box;
     width: 1007px;
-    outline-color: #3B5B8A;
     
-    border: 1px solid #3B5B8A;
-    margin: 1px;
+   
+    outline: 2px solid #050a1199;
+    border: 1px solid;
+    border-image-source:  linear-gradient(to bottom,transparent,#3b5b8b);
+    
+    border-image-slice: 1;
 }
+
 .column
 {   background-color:  #050a1199;
     padding: 16px;
@@ -190,7 +194,7 @@ h1
     color: #AAE0FC;
 }
 .last
-{   margin: 6px;
+{   margin-top: 6px;
     display: flex;
     background-color: #29416D;
     float: left;

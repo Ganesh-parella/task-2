@@ -208,6 +208,16 @@ h3
 .row
 {
     margin-top: 60px;
+      box-sizing: border-box;
+        width: 1009px;
+        
+       
+        outline: 2px solid #050a1199;
+        border: 1px solid;
+        border-image-source:  linear-gradient(to bottom,transparent,#3b5b8b);
+        
+        border-image-slice: 1;
+    
 }
 .row::after
 {   content: " ";
